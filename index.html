@@ -6,7 +6,8 @@
   <meta name="keywords" content="Интернет магазин «Техномарт»">
   <meta name="description" content="Интернет-магазин строительных материалов и инструментов для ремонта">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!--! Шрифты подключение и оптимизация-->
   <title>Техномарт</title>
 </head>
 
@@ -22,7 +23,8 @@
           <button class="search__button" type="button">#</button>
         </form>
         <a class="bookmark" href="#">Закладки: <span class="bookmark__count">0</span></a>
-        <a class="btn cart" href="#">Корзина: <span class="cart__count">0</span></a>
+        <!--! ниже убран класс btn-->
+        <a class="cart" href="#">Корзина: <span class="cart__count">0</span></a>
         <a class="btn btn--green checkout" href="#">Оформить заказ</a>
       </div>
       <div class="header__middle">
@@ -78,7 +80,7 @@
           <ul class="slider__list">
             <li class="slider__item slider__item-1">
               <h3 class="slider__title">Дрели</h3>
-              <p class="slider__text">Соседям на радость</p>
+              <p class="slider__text">Соседям на радость!</p>
               <img class="slider__img" src="img/Slider-1.jpg" alt="Мужчина с дрелью Bocsh">
             </li>
             <li class="slider__item slider__item-2">
@@ -100,8 +102,10 @@
       </div>
     </section>
     <section class="popular-product">
-      <h2 class="popular-product__title">Популярные товары:</h2>
-      <a class="btn btn--red" href="#">Все популярные товары</a>
+      <div class="title-container">
+        <h2 class="popular-product__title">Популярные товары:</h2>
+        <a class="btn btn--red" href="#">Все популярные товары</a>
+      </div>
       <ul class="popular-product__list">
         <li class="popular-product__item">
           <article class="product">
@@ -154,17 +158,19 @@
       </ul>
     </section>
     <section class="popular-manufacturers">
-      <h2 class="popular-manufacturers__title">Популярные производители:</h2>
-      <a class="btn btn--red" href="#">Все производители</a>
+      <div class="title-container">
+        <h2 class="popular-manufacturers__title">Популярные производители:</h2>
+        <a class="btn btn--red" href="#">Все производители</a>
+      </div>
       <ul class="popular-manufacturers__list">
-        <li class="popular-manufacturers__item"><img class="popular-manufacturers__img" width="126" height="37" src="img/bosch.png" alt="Логотип BOSCH"></li>
-        <li class="popular-manufacturers__item"><img class="popular-manufacturers__img" width="123" height="40" src="img/Makita.png" alt="Логотип Makita"></li>
-        <li class="popular-manufacturers__item"><img class="popular-manufacturers__img" width="146" height="44" src="img/DeWALT.png" alt="Логотип DeWALT"></li>
-        <li class="popular-manufacturers__item"><img class="popular-manufacturers__img" width="200" height="88" src="img/interscol.png" alt="Логотип Интерскол"></li>
-        <li class="popular-manufacturers__item"><img class="popular-manufacturers__img" width="169" height="31" src="img/Hitachi.png" alt="Логотип Hitachi"></li>
-        <li class="popular-manufacturers__item"><img class="popular-manufacturers__img" width="121" height="73" src="img/LG.png" alt="Логотип LG"></li>
-        <li class="popular-manufacturers__item"><img class="popular-manufacturers__img" width="151" height="96" src="img/AEG.png" alt="Логотип AEG"></li>
-        <li class="popular-manufacturers__item"><img class="popular-manufacturers__img" width="204" height="69" src="img/Metabo.png" alt="Логотип Metabo"></li>
+        <li class="popular-manufacturers__item"><a class="popular-manufacturers__link" href="#"><img class="popular-manufacturers__img" width="126" height="37" src="img/bosch.png" alt="Логотип BOSCH"></a></li>
+        <li class="popular-manufacturers__item"><a class="popular-manufacturers__link" href="#"><img class="popular-manufacturers__img" width="123" height="40" src="img/Makita.png" alt="Логотип Makita"></a></li>
+        <li class="popular-manufacturers__item"><a class="popular-manufacturers__link" href="#"><img class="popular-manufacturers__img" width="146" height="44" src="img/DeWALT.png" alt="Логотип DeWALT"></a></li>
+        <li class="popular-manufacturers__item"><a class="popular-manufacturers__link" href="#"><img class="popular-manufacturers__img" width="200" height="88" src="img/interscol.png" alt="Логотип Интерскол"></a></li>
+        <li class="popular-manufacturers__item"><a class="popular-manufacturers__link" href="#"><img class="popular-manufacturers__img" width="169" height="31" src="img/Hitachi.png" alt="Логотип Hitachi"></a></li>
+        <li class="popular-manufacturers__item"><a class="popular-manufacturers__link" href="#"><img class="popular-manufacturers__img" width="121" height="73" src="img/LG.png" alt="Логотип LG"></a></li>
+        <li class="popular-manufacturers__item"><a class="popular-manufacturers__link" href="#"><img class="popular-manufacturers__img" width="151" height="96" src="img/AEG.png" alt="Логотип AEG"></a></li>
+        <li class="popular-manufacturers__item"><a class="popular-manufacturers__link" href="#"><img class="popular-manufacturers__img" width="204" height="69" src="img/Metabo.png" alt="Логотип Metabo"></a></li>
       </ul>
     </section>
     <section class="services">
@@ -173,10 +179,10 @@
         Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
       <div class="services-slider">
         <input class="visually-hidden" type="radio" name="services" id="delivery" checked>
-        <input class="visually-hidden" type="radio" name="services" id="warranty">
-        <input class="visually-hidden" type="radio" name="services" id="credit">
         <label class="services-slider__label" for="delivery">Доставка</label>
+        <input class="visually-hidden" type="radio" name="services" id="warranty">
         <label class="services-slider__label" for="warranty">Гарантия</label>
+        <input class="visually-hidden" type="radio" name="services" id="credit">
         <label class="services-slider__label" for="credit">Кредит</label>
         <ul class="services-slider__list">
           <li class="services-slider__item-1">
@@ -250,11 +256,11 @@
           <li class="footer-nav__item"><a class="footer-nav__link" href="#">Доставка</a></li>
           <li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
         </ul>
-        <ul class="footer-nav__list--gold">
-          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Материалы</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Техника</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Инструмент</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Спецпредложения</a></li>
+        <ul class="footer-nav__list footer-nav__list--gold">
+          <li class="footer-nav__item"><a class="footer-nav__link footer-nav__link--gold" href="#">Материалы</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link footer-nav__link--gold" href="#">Техника</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link footer-nav__link--gold" href="#">Инструмент</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link footer-nav__link--gold" href="#">Спецпредложения</a></li>
         </ul>
       </div>
     </div>
