@@ -13,19 +13,19 @@
 <body class="page">
   <header class="header">
     <div class="header-container">
-      <div class="header__top">
+      <div class="header-top">
         <a class="logo" href="#">
           <img class="logo__img" width="108" height="18" src="img/logo.png" alt="Логотип интернет-магазина «Техномарт»">
         </a>
         <form class="form" aria-label="Search">
           <input class="search__input" type="search" name="search" placeholder="Поиск:">
-          <button class="search__button" type="submit">#</button>
+          <button class="search__btn" type="submit">#</button>
         </form>
         <a class="bookmark" href="#">Закладки: <span class="bookmark__count">0</span></a>
-        <a class="btn cart cart--full" href="#">Корзина: <span class="cart__count">10</span></a>
-        <a class="btn btn--green checkout" href="#">Оформить заказ</a>
+        <a class="cart cart--full" href="#">Корзина: <span class="cart__count">10</span></a>
+        <a class="btn header-top__btn checkout" href="#">Оформить заказ</a>
       </div>
-      <div class="header__middle">
+      <div class="header-middle">
         <P class="header__desc">Интернет-магазин<br>
           строительных материалов<br>
           и инструментов для ремонта</p>
@@ -33,18 +33,20 @@
           <a class="contact__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <p class="contact__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
-        <div class="account">
-          <div class="btn account__btn">
-            <a class="account__username" href="#">Равшан Джемшутович</a>
-            <a class="account__logout" href="#">#</a>
-          </div>
-           <ul class="account__menu">
+        <div class="account" hidden>
+          <a class="btn account__btn" href="#">Войти</a>
+          <a class="btn account__btn" href="#">Регистрация</a>
+        </div>
+        <div class="account account--login">
+          <a class="btn account__btn account__btn--username" href="#">Равшан Джемшутович</a>
+          <a class="btn account__btn account__btn--logout" href="#">#</a>
+          <ul class="account__menu">
             <li class="account__item"><a class="account__link" href="#">Мои заказы</a></li>
             <li class="account__item"><a class="account__link" href="#">Личный кабинет</a></li>
-           </ul>
+          </ul>
         </div>
       </div>
-      <div class="header__bottom">
+      <div class="header-bottom">
         <nav class="main-nav">
           <ul class="site-nav">
             <li class="site-nav__item"><a class="site-nav__link" href="index.html" >Главная</a></li>
@@ -69,10 +71,10 @@
     <div class="catalog">
       <h1 class="catalog__title">Перфораторы</h1>
       <section class="catalog__filter filter">
-        <h2 class="visually-hidden">Фильтр товаров</h2>
+        <h2 class="filter__title">Фильтр:</h2>
         <form class="filter__form">
-          <fieldset class="filter__price">
-            <legend class="filter__title">Цена:</legend>
+          <fieldset class="filter__fieldset">
+            <legend class="filter__subtitle">Цена:</legend>
             <!--! Добавить двойной range -->
             <div class="range-slider">
               <input type="number" value="0" name="min">
@@ -85,8 +87,8 @@
             </div>
             <!--! Добавить двойной range КОНЕЦ -->
           </fieldset>
-          <fieldset class="filter_manufacturers">
-            <legend class="filter__title">Производители:</legend>
+          <fieldset class="filter__fieldset">
+            <legend class="filter__subtitle">Производители:</legend>
             <ul class="filter__list">
               <li class="filter__item">
                 <input type="checkbox" name="manufacturers" id="bosch">
@@ -110,8 +112,8 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter_power">
-            <legend class="filter__title">Питание:</legend>
+          <fieldset class="filter__fieldset">
+            <legend class="filter__subtitle">Питание:</legend>
             <ul class="filter__list">
               <li class="filter__item">
                 <input type="radio" name="power" id="battery" checked>
@@ -123,7 +125,7 @@
               </li>
             </ul>
           </fieldset>
-          <button class="btn" type="button">Показать</button>
+          <button class="btn btn--theme-catalog" type="button">Показать</button>
         </form>
 
       </section>
@@ -131,11 +133,11 @@
         <section class="catalog__sort sort">
           <h2 class="sort__title">Сортировка:</h2>
           <ul class="sort__list">
-            <li class="sort__item"><a class="sort__link sort__link--active" href="#">По цене</a></li>
-            <li class="sort__item"><a class="sort__link" href="#">По типу</a></li>
-            <li class="sort__item"><a class="sort__link" href="#">По функционалу</a></li>
-            <li class="sort__item"><a class="sort__link sort__link--active" href="#" title="По возрастанию">Up</a></li>
-            <li class="sort__item"><a class="sort__link" href="#" title="По убыванию">Down</a></li>
+            <li class="sort__item"><button class="sort__btn sort__btn--current" type="button" href="#">По цене</a></li>
+            <li class="sort__item"><button class="sort__btn" type="button" href="#">По типу</a></li>
+            <li class="sort__item"><button class="sort__btn" type="button" href="#">По функционалу</a></li>
+            <li class="sort__item"><button class="sort__btn sort__btn--current sort__btn--arrow-up" type="button" href="#" title="По возрастанию">Up</a></li>
+            <li class="sort__item"><button class="sort__btn sort__btn--arrow-down" type="button" href="#" title="По убыванию">Down</a></li>
           </ul>
         </section>
         <section class="catalog__content">
@@ -144,8 +146,8 @@
             <li class="catalog__item">
               <article class="product">
                 <div class="product--hover">
-                  <a class="btn btn--green" href="#">Купить</a>
-                  <button class="btn btn--border" type="button">В закладки</button>
+                  <a class="btn product__btn" href="#">Купить</a>
+                  <button class="btn product__btn--border" type="button">В закладки</button>
                 </div>
                 <img class="product__img" width="218" height="170" src="img/Perforator_1.png" alt="Перфоратор BOSCH BFG 3000">
                 <h3 class="product__title">Перфоратор BOSCH BFG 3000</h3>
@@ -156,8 +158,8 @@
             <li class="catalog__item">
               <article class="product">
                 <div class="product--hover">
-                  <a class="btn btn--green" href="#">Купить</a>
-                  <button class="btn btn--border" type="button">В закладки</button>
+                  <a class="btn product__btn" href="#">Купить</a>
+                  <button class="btn product__btn--border" type="button">В закладки</button>
                 </div>
                 <img class="product__img" width="218" height="170" src="img/Perforator_2.png" alt="Перфоратор BOSCH BFG 6000">
                 <h3 class="product__title">Перфоратор BOSCH BFG 6000</h3>
@@ -168,8 +170,8 @@
             <li class="catalog__item">
               <article class="product new">
                 <div class="product--hover">
-                  <a class="btn btn--green" href="#">Купить</a>
-                  <button class="btn btn--border" type="button">В закладки</button>
+                  <a class="btn product__btn" href="#">Купить</a>
+                  <button class="btn product__btn--border" type="button">В закладки</button>
                 </div>
                 <img class="product__img" width="218" height="170" src="img/Perforator_3.png" alt="Перфоратор BOSCH BFG 2000">
                 <h3 class="product__title">Перфоратор BOSCH BFG 2000</h3>
@@ -180,8 +182,8 @@
             <li class="catalog__item">
               <article class="product">
                 <div class="product--hover">
-                  <a class="btn btn--green" href="#">Купить</a>
-                  <button class="btn btn--border" type="button">В закладки</button>
+                  <a class="btn product__btn" href="#">Купить</a>
+                  <button class="btn product__btn--border" type="button">В закладки</button>
                 </div>
                 <img class="product__img" width="218" height="170" src="img/Perforator_1.png" alt="Перфоратор BOSCH BFG 3000">
                 <h3 class="product__title">Перфоратор BOSCH BFG 3000</h3>
@@ -192,8 +194,8 @@
             <li class="catalog__item">
               <article class="product new">
                 <div class="product--hover">
-                  <a class="btn btn--green" href="#">Купить</a>
-                  <button class="btn btn--border" type="button">В закладки</button>
+                  <a class="btn product__btn" href="#">Купить</a>
+                  <button class="btn product__btn--border" type="button">В закладки</button>
                 </div>
                 <img class="product__img" width="218" height="170" src="img/Perforator_2.png" alt="Перфоратор BOSCH BFG 6000">
                 <h3 class="product__title">Перфоратор BOSCH BFG 6000</h3>
@@ -204,8 +206,8 @@
             <li class="catalog__item">
               <article class="product">
                 <div class="product--hover">
-                  <a class="btn btn--green" href="#">Купить</a>
-                  <button class="btn btn--border" type="button">В закладки</button>
+                  <a class="btn product__btn" href="#">Купить</a>
+                  <button class="btn product__btn--border" type="button">В закладки</button>
                 </div>
                 <img class="product__img" width="218" height="170" src="img/Perforator_3.png" alt="Перфоратор BOSCH BFG 2000">
                 <h3 class="product__title">Перфоратор BOSCH BFG 2000</h3>
@@ -216,8 +218,8 @@
             <li class="catalog__item">
               <article class="product new">
                 <div class="product--hover">
-                  <a class="btn btn--green" href="#">Купить</a>
-                  <button class="btn btn--border" type="button">В закладки</button>
+                  <a class="btn product__btn" href="#">Купить</a>
+                  <button class="btn product__btn--border" type="button">В закладки</button>
                 </div>
                 <img class="product__img" width="218" height="170" src="img/Perforator_1.png" alt="Перфоратор BOSCH BFG 3000">
                 <h3 class="product__title">Перфоратор BOSCH BFG 3000</h3>
@@ -228,8 +230,8 @@
             <li class="catalog__item">
               <article class="product">
                 <div class="product--hover">
-                  <a class="btn btn--green" href="#">Купить</a>
-                  <button class="btn btn--border" type="button">В закладки</button>
+                  <a class="btn product__btn" href="#">Купить</a>
+                  <button class="btn product__btn--border" type="button">В закладки</button>
                 </div>
                 <img class="product__img" width="218" height="170" src="img/Perforator_2.png" alt="Перфоратор BOSCH BFG 6000">
                 <h3 class="product__title">Перфоратор BOSCH BFG 6000</h3>
@@ -240,8 +242,8 @@
             <li class="catalog__item">
               <article class="product">
                 <div class="product--hover">
-                  <a class="btn btn--green" href="#">Купить</a>
-                  <button class="btn btn--border" type="button">В закладки</button>
+                  <a class="btn product__btn" href="#">Купить</a>
+                  <button class="btn product__btn--border" type="button">В закладки</button>
                 </div>
                 <img class="product__img" width="218" height="170" src="img/Perforator_3.png" alt="Перфоратор BOSCH BFG 2000">
                 <h3 class="product__title">Перфоратор BOSCH BFG 2000</h3>
@@ -251,10 +253,10 @@
             </li>
           </ul>
           <ul class="pagination">
-            <li class="pagination__item"><a class="btn btn--red btn--current" href="#">1</a></li>
-            <li class="pagination__item"><a class="btn" href="#">2</a></li>
-            <li class="pagination__item"><a class="btn" href="#">3</a></li>
-            <li class="pagination__item"><a class="btn" href="#">Следующая</a></li>
+            <li class="pagination__item"><a class="btn btn--current" href="#">1</a></li>
+            <li class="pagination__item"><a class="btn btn--theme-catalog" href="#">2</a></li>
+            <li class="pagination__item"><a class="btn btn--theme-catalog" href="#">3</a></li>
+            <li class="pagination__item"><a class="btn btn--theme-catalog" href="#">Следующая</a></li>
           </ul>
         </section>
       </div>
@@ -285,11 +287,11 @@
           <li class="footer-nav__item"><a class="footer-nav__link" href="#">Доставка</a></li>
           <li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
         </ul>
-        <ul class="footer-nav__list footer-nav__list--gold">
-          <li class="footer-nav__item"><a class="footer-nav__link footer-nav__link--gold" href="#">Материалы</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link footer-nav__link--gold" href="#">Техника</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link footer-nav__link--gold" href="#">Инструмент</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link footer-nav__link--gold" href="#">Спецпредложения</a></li>
+        <ul class="footer-nav__list footer-nav__list--color-gold">
+          <li class="footer-nav__item"><a class="footer-nav__link footer-nav__link--color-gold" href="#">Материалы</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link footer-nav__link--color-gold" href="#">Техника</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link footer-nav__link--color-gold" href="#">Инструмент</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link footer-nav__link--color-gold" href="#">Спецпредложения</a></li>
         </ul>
       </div>
     </div>
@@ -318,10 +320,10 @@
     </div>
   </footer>
   <section class="modal modal-cart">
-    <h2 class="modal__title">Товар добавлен в корзину</h2>
+    <h2 class="modal-cart__title">Товар добавлен в корзину</h2>
     <button class="btn-close" type="button" title="Закрыть">x</button>
-    <div class="modal-cart-container">
-      <a class="btn btn--red" href="">Оформить заказ</a>
+    <div class="modal-cart__btn-container">
+      <a class="btn btn--color-red" href="">Оформить заказ</a>
       <a class="btn" href="">Продолжить покупки</a>
     </div>
   </section>
