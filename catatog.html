@@ -78,17 +78,20 @@
           <form class="filter__form">
             <fieldset class="filter__fieldset">
               <legend class="filter__subtitle">Цена:</legend>
-              <!--! Добавить двойной range -->
               <div class="range-slider">
-                <input type="number" value="0" name="min">
-                <input type="number" value="0" name="max">
-
-                <div class="range-slider-track">
-                  <div class="range-slider-pin range-slider-pin-min"></div>
-                  <div class="range-slider-pin range-slider-pin-max"></div>
+                <div class="range-slider__track">
+                  <div class="range-slider__scale">
+                    <div class="range-slider__bar">
+                      <div class="range-slider__pin range-slider__pin--min"></div>
+                      <div class="range-slider__pin range-slider__pin--max"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="range-slider__price-container">
+                  <input class="range-slider__price" type="number" value="0" name="min">
+                  <input class="range-slider__price" type="number" value="0" name="max">
                 </div>
               </div>
-              <!--! Добавить двойной range КОНЕЦ -->
             </fieldset>
             <fieldset class="filter__fieldset">
               <legend class="filter__subtitle">Производители:</legend>
@@ -136,11 +139,11 @@
           <section class="catalog__sort sort">
             <h2 class="sort__title">Сортировка:</h2>
             <ul class="sort__list">
-              <li class="sort__item"><button class="sort__btn sort__btn--current" type="button" href="#">По цене</a></li>
-              <li class="sort__item"><button class="sort__btn" type="button" href="#">По типу</a></li>
-              <li class="sort__item"><button class="sort__btn" type="button" href="#">По функционалу</a></li>
-              <li class="sort__item"><button class="sort__btn sort__btn--current sort__btn--arrow-up" type="button" href="#" title="По возрастанию">Up</a></li>
-              <li class="sort__item"><button class="sort__btn sort__btn--arrow-down" type="button" href="#" title="По убыванию">Down</a></li>
+              <li class="sort__item"><button class="sort__btn sort__btn--current" type="button">По цене</button></li>
+              <li class="sort__item"><button class="sort__btn" type="button">По типу</button></li>
+              <li class="sort__item"><button class="sort__btn" type="button">По функционалу</button></li>
+              <li class="sort__item"><button class="sort__btn sort__btn--current sort__btn--arrow-up" type="button" title="По возрастанию">Up</button></li>
+              <li class="sort__item"><button class="sort__btn sort__btn--arrow-down" type="button" title="По убыванию">Down</button></li>
             </ul>
           </section>
           <section class="catalog__content">
@@ -264,13 +267,15 @@
           </section>
         </div>
       </div>
-      <aside class="catalog-info">
+    </div>
+    <aside class="catalog-info">
+      <div class="container">
         <h2 class="catalog-info__title">Пара слов о перфораторах</h2>
         <p class="catalog-info__text">Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
           Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
           В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
-      </aside>
-    </div>
+      </div>
+    </aside>
   </main>
   <footer class="footer">
     <div class="footer__top">
