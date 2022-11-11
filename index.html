@@ -269,7 +269,7 @@
             <li class="footer-nav__item"><a class="footer-nav__link" href="#">Доставка</a></li>
             <li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
           </ul>
-          <ul class="footer-nav__list footer-nav__list--color-gold">
+          <ul class="footer-nav__list footer-nav__list-2">
             <li class="footer-nav__item"><a class="footer-nav__link footer-nav__link--color-gold" href="#">Материалы</a></li>
             <li class="footer-nav__item"><a class="footer-nav__link footer-nav__link--color-gold" href="#">Техника</a></li>
             <li class="footer-nav__item"><a class="footer-nav__link footer-nav__link--color-gold" href="#">Инструмент</a></li>
@@ -309,21 +309,24 @@
     <button class="btn-close" type="button" title="Закрыть">x</button>
   </section>
   <section class="modal write-us">
-    <div class="write-us-container">
-      <h2 class="visually-hidden">Форма для связи</h2>
-      <form class="write-us__form" id="write-us" action="https://echo.htmlacademy.ru" method="post">
-        <label class="write-us__title" for="name">Ваше имя:</label>
-        <input class="write-us__text" type="text" name="name" id="name" placeholder="Имя Фамилия" required>
-        <label class="write-us__title" for="email">Ваш e-mail:</label>
-        <input class="write-us__text" type="email" name="email" id="email" placeholder="email@example.com" required>
-        <label class="write-us__title" class="write-us__title" for="text">Текст письма:</label>
-        <textarea class="write-us__text write-us__text--textarea" name="text" id="text" cols="30" rows="10" placeholder="В свободной форме" required></textarea>
-        <div class="write-us__btn-container">
-          <button class="btn btn--color-red write-us__btn" type="submit">Отправить</button>
-        </div>
-      </form>
-      <button class="btn-close" type="button" title="Закрыть">x</button>
-    </div>
+    <h2 class="visually-hidden">Форма для связи</h2>
+    <form class="write-us__form" id="write-us" action="https://echo.htmlacademy.ru" method="post">
+      <div class="container modal__container">
+        <label class="write-us__name write-us__title" for="name">Ваше имя:
+          <input class="write-us__input" type="text" name="name" id="name" placeholder="Имя Фамилия" required>
+        </label>
+        <label class="write-us__email write-us__title" for="email">Ваш e-mail:
+          <input class="write-us__input" type="email" name="email" id="email" placeholder="email@example.com" required>
+        </label>
+        <label class="write-us__text write-us__title" for="text">Текст письма:
+          <textarea class="write-us__input write-us__textarea" name="text" id="text" cols="30" rows="5" placeholder="В свободной форме" required></textarea>
+        </label>
+      </div>
+      <div class="write-us__btn-container">
+        <button class="btn btn--color-red write-us__btn" type="submit">Отправить</button>
+      </div>
+    </form>
+    <button class="btn-close write-us__btn-close" type="button" title="Закрыть">x</button>
   </section>
 </body>
 </html>
