@@ -2376,3 +2376,17 @@ input[type="radio"]:focus + .filter__radio-label::before {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+@keyframes fadein {
+  0% {transform: translateY(-2000px)}
+  70% {transform: translateY(30px)}
+  90% {transform: translateY(-10px)}
+  100% {transform: translateY(0)}
+}
+
+.modal-show {
+  display: block;
+  animation: fadein .6s;
+}
+
+

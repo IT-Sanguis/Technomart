@@ -102,6 +102,7 @@
       </div>
     </div>
   </header>
+
   <main class="main">
     <h1 class="visually-hidden">Главная интернет-магазина «Техномарт»</h1>
     <div class="container">
@@ -296,6 +297,7 @@
       </section>
     </div>
   </main>
+
   <footer class="footer">
     <div class="footer__top">
       <div class="container footer-flex">
@@ -375,12 +377,14 @@
       </div>
     </div>
   </footer>
+
   <section class="modal modal__map">
     <h2 class="visually-hidden">Как добраться</h2>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123775!2d30.320894615847436!3d59.938796869048254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sus!4v1667179603844!5m2!1sru!2sus" width="940" height="446" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <img src="img/big-map.jpg" width="940" height="446" alt="Мы на карте: ул. Большая Конюшенная, 19">
     <button class="btn-close" type="button" title="Закрыть"></button>
   </section>
+
   <section class="modal write-us">
     <h2 class="visually-hidden">Форма для связи</h2>
     <form class="write-us__form" id="write-us" action="https://echo.htmlacademy.ru" method="post">
@@ -401,5 +405,17 @@
     </form>
     <button class="btn-close" type="button" title="Закрыть"></button>
   </section>
+
+  <section class="modal modal-cart">
+    <h2 class="modal-cart__title">Товар добавлен в корзину!</h2>
+    <button class="btn-close" type="button" title="Закрыть"></button>
+    <div class="modal-cart__btn-container">
+      <a class="btn btn--color-red modal-cart__btn" href="">Оформить заказ</a>
+      <a class="btn modal-cart__btn" href="">Продолжить покупки</a>
+    </div>
+  </section>
+
+  <script src="/js/modal.js"></script>
+
 </body>
 </html>
