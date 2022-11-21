@@ -1616,7 +1616,7 @@ input[type="radio"]:checked + .services-slider__label {
   color: #ee3643;
 }
 
-.cart--full {
+.full {
   background-color: #ee3643;
 }
 
@@ -2310,6 +2310,7 @@ input[type="radio"]:focus + .filter__radio-label::before {
   flex-wrap: wrap;
   width: 480px;
   padding-top: 47px;
+  padding-bottom: 12px;
 }
 
 .write-us__title {
@@ -2364,7 +2365,7 @@ input[type="radio"]:focus + .filter__radio-label::before {
 
 .write-us__btn-container {
   min-height: 112px;
-  padding-top: 50px;
+  padding-top: 37px;
   padding-left: 80px;
   padding-right: 80px;
 
@@ -2378,15 +2379,26 @@ input[type="radio"]:focus + .filter__radio-label::before {
 }
 
 @keyframes fadein {
-  0% {transform: translateY(-2000px)}
-  70% {transform: translateY(30px)}
-  90% {transform: translateY(-10px)}
-  100% {transform: translateY(0)}
+  0% {transform: translateY(-2000px);}
+  70% {transform: translateY(30px);}
+  90% {transform: translateY(-10px);}
+  100% {transform: translateY(0);}
 }
 
 .modal-show {
   display: block;
-  animation: fadein .6s;
+  animation-name: fadein;
+  animation-duration: 0.6s;
 }
 
+@keyframes shake {
+  0%, 100% {transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px);}
+  20%, 40%, 60%, 80% { transform: translateX(10px);}
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
+}
 
