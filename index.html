@@ -123,23 +123,23 @@
         <div class="slider">
           <ul class="slider__dots-list">
             <li class="slider__dots-item">
-              <input class="visually-hidden" type="radio" name="toggle" id="perforator">
+              <input class="visually-hidden" type="radio" name="toggle" id="perforator" data-slider="slider__item--perforator">
               <label class="slider__dot" for="perforator"></label>
             </li>
             <li class="slider__dots-item">
-              <input class="visually-hidden" type="radio" name="toggle" id="drill" checked>
+              <input class="visually-hidden" type="radio" name="toggle" id="drill" data-slider="slider__item--drill" checked>
               <label class="slider__dot" for="drill"></label>
             </li>
           </ul>
           <button class="slider__btn slider__btn--prev" type="button" title="Предыдущий"></button>
           <button class="slider__btn slider__btn--next" type="button" title="Следующий"></button>
           <ul class="slider__list">
-            <li class="slider__item slider__item-1">
+            <li class="slider__item slider__item--perforator">
               <h3 class="slider__title">Перфораторы</h3>
               <p class="slider__text">Настоящие мужские игрушки</p>
               <img class="slider__img" src="img/Slider-1.jpg" width="620" height="266" alt="Мужчина с перфоратором Bocsh">
             </li>
-            <li class="slider__item slider__item-2">
+            <li class="slider__item slider__item--drill element--current">
               <h3 class="slider__title">Дрели</h3>
               <p class="slider__text">Соседям на радость!</p>
               <img class="slider__img" src="img/Slider-2.jpg" width="620" height="266" alt="Мужчина с дрелью Bocsh">
@@ -236,36 +236,36 @@
         <h2 class="services__title">Сервисы</h2>
         <p class="services__text">Хороший интернет-магазин отличается от плохого не только ценами!<br>
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-        <div class="services-slider">
+        <div class="services-tabs">
           <div class="services-label-container">
-            <input class="visually-hidden" type="radio" name="services" id="delivery" checked>
-            <label class="services-slider__label" for="delivery">Доставка</label>
-            <input class="visually-hidden" type="radio" name="services" id="warranty">
-            <label class="services-slider__label" for="warranty">Гарантия</label>
-            <input class="visually-hidden" type="radio" name="services" id="credit">
-            <label class="services-slider__label" for="credit">Кредит</label>
+            <input class="visually-hidden" type="radio" name="services" id="delivery" data-tab="services-tabs__item--delivery" checked>
+            <label class="services-tabs__label" for="delivery">Доставка</label>
+            <input class="visually-hidden" type="radio" name="services" id="warranty" data-tab="services-tabs__item--warranty">
+            <label class="services-tabs__label" for="warranty">Гарантия</label>
+            <input class="visually-hidden" type="radio" name="services" id="credit" data-tab="services-tabs__item--credit">
+            <label class="services-tabs__label" for="credit">Кредит</label>
           </div>
-          <ul class="services-slider__list">
-            <li class="services-slider__item services-slider__item-1">
-              <h3 class="services-slider__title">Доставка</h3>
-              <p class="services-slider__text">Мы с удовольствием доставим ваш товар прямо<br>
+          <ul class="services-tabs__list">
+            <li class="services-tabs__item services-tabs__item--delivery element--current">
+              <h3 class="services-tabs__title">Доставка</h3>
+              <p class="services-tabs__text">Мы с удовольствием доставим ваш товар прямо<br>
                 к вашему подъезду совершенно бесплатно!<br>
                 Ведь мы неплохо заработаем,<br>
                 поднимая его на ваш этаж!</p>
             </li>
-            <li class="services-slider__item services-slider__item-2">
-              <h3 class="services-slider__title">Гарантия</h3>
-              <p class="services-slider__text">Если купленный у нас товар поломается или заискрит,<br>
+            <li class="services-tabs__item services-tabs__item--warranty">
+              <h3 class="services-tabs__title">Гарантия</h3>
+              <p class="services-tabs__text">Если купленный у нас товар поломается или заискрит,<br>
                 а также в случае пожара, спровоцированного его возгоранием,<br>
                 вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
                  сгоревший товар на новый.<br>
                 Дом уж восстановите как-нибудь сами.</p>
             </li>
-            <li class="services-slider__item services-slider__item-3">
-              <h3 class="services-slider__title">Кредит</h3>
-              <p class="services-slider__text">Залезть в долговую яму стало проще!<br>
+            <li class="services-tabs__item services-tabs__item--credit">
+              <h3 class="services-tabs__title">Кредит</h3>
+              <p class="services-tabs__text">Залезть в долговую яму стало проще!<br>
                 Кредитные консультанты придут вам на помощь.</p>
-              <a class="btn btn--color-red services-slider__btn" href="#">Отправить заявку</a>
+              <a class="btn btn--color-red services-tabs__btn" href="#">Отправить заявку</a>
             </li>
           </ul>
         </div>
@@ -416,6 +416,6 @@
   </section>
 
   <script src="/js/modal.js"></script>
-
+  <script src="/js/slider.js"></script>
 </body>
 </html>

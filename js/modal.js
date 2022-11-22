@@ -95,14 +95,12 @@ if (btnBookmark) {
         localStorage.setItem("localBookmarkCount", bookmarkCount);
         bookmark.querySelector(".bookmark__count").textContent = localStorage.getItem("localBookmarkCount");;
       }
-      if (!bookmark.classList.contains("full" && bookmarkCount != 0)) {
+      if (!bookmark.classList.contains("full") && bookmarkCount != 0) {
         bookmark.classList.add("full");
       }
     });
   }
 }
-
-
 
 if (btnBuy) {
   if (isStorageSupport) {
@@ -126,7 +124,7 @@ if (btnBuy) {
         localStorage.setItem("localCartCount", cartCount);
         cart.querySelector(".cart__count").textContent = localStorage.getItem("localCartCount");;
       }
-      if (!cart.classList.contains("full" && cartCount != 0)) {
+      if (!cart.classList.contains("full") && cartCount != 0) {
         cart.classList.add("full");
       }
     });
