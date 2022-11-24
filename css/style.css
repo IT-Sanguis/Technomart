@@ -560,7 +560,6 @@ img {
 
 .contact__btn {
   width: 300px;
-  /* margin-top: 20px; */
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -1061,7 +1060,6 @@ input[name="toggle"]:checked + .slider__dot {
 .product--hover {
   position: absolute;
 
-  /* display: block; */
   display: none;
   width: 215px;
   min-height: 100px;
@@ -1348,7 +1346,6 @@ input[type="radio"]:checked + .services-tabs__label {
 
 .about-company {
   width: 540px;
-  /* min-height: 535px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2143,7 +2140,6 @@ input[type="radio"]:focus + .filter__radio-label::before {
   left: 50%;
   z-index: 1;
 
-  /* display: block; */
   display: none;
   width: 620px;
   min-height: 282px;
@@ -2198,10 +2194,6 @@ input[type="radio"]:focus + .filter__radio-label::before {
   padding-bottom: 10px;
 }
 
-/* .modal-cart__btn-close {
-  right: -3px;
-} */
-
 .modal {
   position: fixed;
 
@@ -2213,7 +2205,6 @@ input[type="radio"]:focus + .filter__radio-label::before {
   top: 120px;
   left: 50%;
 
-  /* display: block; */
   display: none;
   width: 940px;
   height: 446px;
@@ -2232,7 +2223,9 @@ input[type="radio"]:focus + .filter__radio-label::before {
 .btn-close {
   position: absolute;
   top: 8px;
-  right: -3px;
+  right: 10px;
+
+  padding: 12px;
 
   border: none;
   background-color: transparent;
@@ -2245,7 +2238,7 @@ input[type="radio"]:focus + .filter__radio-label::before {
   content: "";
   position: absolute;
   top: 8px;
-  right: 9px;
+  right: -3px;
 
   width: 27px;
   height: 5px;
@@ -2268,7 +2261,6 @@ input[type="radio"]:focus + .filter__radio-label::before {
   top: 120px;
   left: 50%;
 
-  /* display: block; */
   display: none;
   width: 620px;
   min-height: 430px;

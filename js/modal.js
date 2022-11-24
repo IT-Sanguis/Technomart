@@ -93,7 +93,7 @@ if (btnBookmark) {
       bookmarkCount = +bookmarkCount + 1;
       if (isStorageSupport) {
         localStorage.setItem("localBookmarkCount", bookmarkCount);
-        bookmark.querySelector(".bookmark__count").textContent = localStorage.getItem("localBookmarkCount");;
+        bookmark.querySelector(".bookmark__count").textContent = localStorage.getItem("localBookmarkCount");
       }
       if (!bookmark.classList.contains("full") && bookmarkCount != 0) {
         bookmark.classList.add("full");
@@ -122,7 +122,7 @@ if (btnBuy) {
       cartCount = +cartCount + 1;
       if (isStorageSupport) {
         localStorage.setItem("localCartCount", cartCount);
-        cart.querySelector(".cart__count").textContent = localStorage.getItem("localCartCount");;
+        cart.querySelector(".cart__count").textContent = localStorage.getItem("localCartCount");
       }
       if (!cart.classList.contains("full") && cartCount != 0) {
         cart.classList.add("full");
